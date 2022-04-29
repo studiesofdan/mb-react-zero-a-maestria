@@ -1,8 +1,9 @@
+import './App.css';
+
 import FirstComponent from './components/FirstComponent';
 import TemplateExpressions from './components/TemplateExpressions';
 import Eventos from './components/Eventos';
-
-import './App.css';
+import Challenge from './components/Challenge';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <FirstComponent />
       <TemplateExpressions />
       <Eventos />
+      <Challenge />
     </div>
   );
 }
