@@ -1,4 +1,6 @@
 import FirstComponent from './components/FirstComponent';
+import TemplateExpressions from './components/TemplateExpressions';
+
 import './App.css';
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
     <div className="App">
       <h1>React: Fundamentos</h1>
       <FirstComponent />
+      <TemplateExpressions />
     </div>
   );
 }
