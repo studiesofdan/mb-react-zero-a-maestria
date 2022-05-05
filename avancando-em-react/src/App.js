@@ -1,6 +1,8 @@
 import './App.css';
 import SovietArtefacts from "./assets/images/soviet-artefacts-gpjGmbPLUxk-unsplash.jpg";
 
+import ManageData from './components/ManageData';
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,8 @@ function App() {
         {/* Imagens em src */}
         <img src={SovietArtefacts} width="50%" height="50%" alt="Soviet Artefacts" />
       </section>
+
+      <ManageData />
     </div>
   );
 }
