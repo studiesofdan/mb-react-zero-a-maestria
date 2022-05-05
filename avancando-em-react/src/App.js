@@ -4,6 +4,7 @@ import SovietArtefacts from "./assets/images/soviet-artefacts-gpjGmbPLUxk-unspla
 import ManageData from './components/ManageData';
 import ListRenderer from './components/ListRenderer';
 import KeyProperty from './components/KeyProperty';
+import PreviousState from './components/PreviousState';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <ManageData />
       <ListRenderer />
       <KeyProperty />
+      <PreviousState />
     </div>
   );
 }
