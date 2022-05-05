@@ -1,8 +1,9 @@
 import './App.css';
 import SovietArtefacts from "./assets/images/soviet-artefacts-gpjGmbPLUxk-unsplash.jpg";
-import ListRenderer from './components/ListRenderer';
 
 import ManageData from './components/ManageData';
+import ListRenderer from './components/ListRenderer';
+import KeyProperty from './components/KeyProperty';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
       <ManageData />
       <ListRenderer />
+      <KeyProperty />
     </div>
   );
 }
