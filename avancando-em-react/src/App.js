@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import './App.css';
 import SovietArtefacts from "./assets/images/soviet-artefacts-gpjGmbPLUxk-unsplash.jpg";
 
@@ -7,8 +9,12 @@ import KeyProperty from './components/KeyProperty';
 import PreviousState from './components/PreviousState';
 import ConditionalRender from './components/ConditionalRender';
 import IfElse from './components/IfElse';
+import ShowUsername from './components/ShowUsername';
 
 function App() {
+  const name = "Taylor Swift"
+  const [userName] = useState("Taylor Swift");
+
   return (
     <div className="App">
       <header>
@@ -30,6 +36,7 @@ function App() {
       <PreviousState />
       <ConditionalRender />
       <IfElse />
+      <ShowUsername name={userName} />
     </div>
   );
 }
