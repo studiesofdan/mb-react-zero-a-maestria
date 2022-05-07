@@ -13,6 +13,7 @@ import ShowUsername from './components/ShowUsername';
 import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 function App() {
   const name = "Taylor Swift"
@@ -23,6 +24,10 @@ function App() {
     { id: 2, brand: "Kia", color: "Branco", newCar: false, km: 34445 },
     { id: 3, brand: "Cherry", color: "Vermelho", newCar: false, km: 26543767 },
   ]
+
+  function showMessage() {
+    console.log("Evento do componente pai")
+  }
 
   return (
     <div className="App">
@@ -76,6 +81,8 @@ function App() {
       <Container myValue="testing 2">
         <h5>Testando o container</h5>
       </Container>
+
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 }
