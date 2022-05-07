@@ -38,7 +38,9 @@ function App() {
       <ConditionalRender />
       <IfElse />
       <ShowUsername name={userName} />
-      <CarDetails brand="Kia" km={123456} color="Orange" />
+      <CarDetails brand="Kia" km={123456} color="Orange" newCar={false} />
+      <CarDetails brand="Ford" km={120000} color="Red" newCar={false} />
+      <CarDetails brand="Renault" km={2} color="Pink" newCar={true} />
     </div>
   );
 }
