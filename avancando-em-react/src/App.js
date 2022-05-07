@@ -10,6 +10,7 @@ import PreviousState from './components/PreviousState';
 import ConditionalRender from './components/ConditionalRender';
 import IfElse from './components/IfElse';
 import ShowUsername from './components/ShowUsername';
+import CarDetails from './components/CarDetails';
 
 function App() {
   const name = "Taylor Swift"
@@ -37,6 +38,7 @@ function App() {
       <ConditionalRender />
       <IfElse />
       <ShowUsername name={userName} />
+      <CarDetails brand="Kia" km={123456} color="Orange" />
     </div>
   );
 }
