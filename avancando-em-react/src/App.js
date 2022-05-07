@@ -12,6 +12,7 @@ import IfElse from './components/IfElse';
 import ShowUsername from './components/ShowUsername';
 import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 
 function App() {
   const name = "Taylor Swift"
@@ -39,12 +40,19 @@ function App() {
       </section>
 
       <ManageData />
+      
       <ListRenderer />
+
       <KeyProperty />
+
       <PreviousState />
+
       <ConditionalRender />
+
       <IfElse />
+
       <ShowUsername name={userName} />
+
       <CarDetails brand="Kia" km={123456} color="Orange" newCar={false} />
       <CarDetails brand="Ford" km={120000} color="Red" newCar={false} />
       <CarDetails brand="Renault" km={2} color="Pink" newCar={true} />
@@ -59,6 +67,14 @@ function App() {
       ))}
 
       <Fragment propFragment="tuts tuts" />
+
+      <Container myValue="testing">
+        <p>E este é o conteúdo</p>
+      </Container>
+
+      <Container myValue="testing 2">
+        <h5>Testando o container</h5>
+      </Container>
     </div>
   );
 }
