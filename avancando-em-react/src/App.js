@@ -5,6 +5,7 @@ import ManageData from './components/ManageData';
 import ListRenderer from './components/ListRenderer';
 import KeyProperty from './components/KeyProperty';
 import PreviousState from './components/PreviousState';
+import ConditionalRender from './components/ConditionalRender';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <ListRenderer />
       <KeyProperty />
       <PreviousState />
+      <ConditionalRender />
     </div>
   );
 }
