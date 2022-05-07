@@ -11,6 +11,7 @@ import ConditionalRender from './components/ConditionalRender';
 import IfElse from './components/IfElse';
 import ShowUsername from './components/ShowUsername';
 import CarDetails from './components/CarDetails';
+import Fragment from './components/Fragment';
 
 function App() {
   const name = "Taylor Swift"
@@ -56,6 +57,8 @@ function App() {
           km={car.km} 
         />
       ))}
+
+      <Fragment propFragment="tuts tuts" />
     </div>
   );
 }
