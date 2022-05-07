@@ -6,6 +6,7 @@ import ListRenderer from './components/ListRenderer';
 import KeyProperty from './components/KeyProperty';
 import PreviousState from './components/PreviousState';
 import ConditionalRender from './components/ConditionalRender';
+import IfElse from './components/IfElse';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <KeyProperty />
       <PreviousState />
       <ConditionalRender />
+      <IfElse />
     </div>
   );
 }
