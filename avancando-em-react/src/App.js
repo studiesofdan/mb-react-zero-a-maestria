@@ -59,6 +59,7 @@ function App() {
 
       {cars.map((car) => (
         <CarDetails 
+          key={car.id}
           brand={car.brand} 
           color={car.color} 
           newCar={car.newCar} 
