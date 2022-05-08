@@ -6,6 +6,8 @@ const Form = ({user }) => {
   const [name, setName] = useState(user ? user.name : "");
   const [email, setEmail] = useState(user ? user.email : "");
 
+  const [bio, setBio] = useState("");
+
   const handleName = (e) => {
     setName(e.target.value);
   }
@@ -13,10 +15,11 @@ const Form = ({user }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Enviando o formulário");
-    console.log(name, email);
+    console.log(name, email, bio);
 
     setName("")
     setEmail("")
+    setBio("")
   }
 
 
@@ -49,6 +52,18 @@ const Form = ({user }) => {
                     placeholder='Digite seu e-mail' 
                     onChange={(e) => setEmail(e.target.value)} 
                     value={email} />
+                </label>
+
+                <br />
+
+                <label>
+                  <span>Bio:</span>
+                  <textarea 
+                    name="bio" 
+                    placeholder="Descrição do usuário" 
+                    onChange={(e) => setBio(e.target.value)} 
+                    value={bio} >
+                  </textarea>
                 </label>
             </section>
             <input type="submit" value="Enviar" />
