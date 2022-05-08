@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Form.css';
 
 const Form = () => {
+  const [name, setName] = useState();
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  }
+
+  console.log(name);
+
   return (
     <div>
         <form>
             <section>
                 <label htmlFor='name'>Nome:</label>
-                <input type="text" name="name" placeholder='Digite o seu nome' />
+                <input type="text" name="name" placeholder='Digite o seu nome' onChange={handleName} />
 
                 <br />
 
