@@ -1,5 +1,6 @@
 import './App.css';
 import MeuComponente from './components/ComponentCSS/MeuComponente';
+import Title from './components/CSSModules/Title';
 
 function App() {
   const gatinnn = 1;
@@ -21,6 +22,7 @@ function App() {
 
       <h5 className={forest ? "evermore" : "brusinha"}>gold rush</h5>
       
+      <Title />
     </div>
   );
 }
