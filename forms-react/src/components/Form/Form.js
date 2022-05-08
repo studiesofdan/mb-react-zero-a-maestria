@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 import './Form.css';
 
-const Form = ({user }) => {
+const Form = ({user}) => {
   const [name, setName] = useState(user ? user.name : "");
   const [email, setEmail] = useState(user ? user.email : "");
-
   const [bio, setBio] = useState("");
+  const [opcao, setOpcao] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -15,11 +15,12 @@ const Form = ({user }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Enviando o formulário");
-    console.log(name, email, bio);
+    console.log(name, email, bio, opcao);
 
     setName("")
     setEmail("")
     setBio("")
+    setOpcao("")
   }
 
 
@@ -65,6 +66,18 @@ const Form = ({user }) => {
                     value={bio} >
                   </textarea>
                 </label>
+
+                <br />
+
+                <label>
+                  <span>Selecione opção:</span>
+                  <select name="opcao" onChange={(e) => setOpcao(e.target.value)} value={opcao} >
+                    <option value="user">Usuário</option>
+                    <option value="editor">Editor</option>
+                    <option value="admin">Administrador</option>
+                  </select>
+                </label>
+
             </section>
             <input type="submit" value="Enviar" />
         </form>
