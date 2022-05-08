@@ -3,6 +3,7 @@ import MeuComponente from './components/ComponentCSS/MeuComponente';
 
 function App() {
   const gatinnn = 1;
+  const forest = true;
 
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
       <h4 style={gatinnn < 10 ? {color: "purple"} : {color: "red"}}> 
       CSS Dinâmico 
       </h4>
+
+      <h5 className={forest ? "evermore" : "brusinha"}>gold rush</h5>
       
     </div>
   );
