@@ -16,6 +16,7 @@ import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
   const name = "Taylor Swift"
@@ -36,6 +37,12 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   }
+
+  const pessoas = [
+    { id: 11, nome: "Sabrina Fernandes", idade: 33, profissao: "Sociologa" },
+    { id: 13, nome: "Taylor Swift", idade: 32, profissao: "Cantora, compositora, produtora, diretora e roteirista" },
+    { id: 21, nome: "Danilo", idade: 27, profissao: "Analista de Sistemas e Futuro Artista" },
+  ]
 
   return (
     <div className="App">
@@ -94,7 +101,16 @@ function App() {
 
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
-      
+
+      <UserDetails />
+      {pessoas.map((pessoa) => (
+        <UserDetails 
+          key={pessoa.id}
+          nome={pessoa.nome}
+          idade={pessoa.idade}
+          profissao={pessoa.profissao}
+        />
+      ))}
     </div>
   );
 }
