@@ -14,14 +14,23 @@ const Form = ({user }) => {
     e.preventDefault();
     console.log("Enviando o formulário");
     console.log(name, email);
+
+    setName("")
+    setEmail("")
   }
+
+
 
   return (
     <div>
         <form onSubmit={handleSubmit}>
             <section>
                 <label htmlFor='name'>Nome:</label>
-                <input type="text" name="name" placeholder='Digite o seu nome' onChange={handleName} value={name} />
+                <input 
+                  type="text" 
+                  name="name" 
+                  placeholder='Digite o seu nome' 
+                  onChange={handleName} value={name} />
 
                 <br />
 
@@ -34,7 +43,12 @@ const Form = ({user }) => {
 
                 <label>
                   <span>E-mail:</span>
-                  <input type="email" name="email" placeholder='Digite seu e-mail' onChange={(e) => setEmail(e.target.value)} value={email} />
+                  <input 
+                    type="email" 
+                    name="email" 
+                    placeholder='Digite seu e-mail' 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    value={email} />
                 </label>
             </section>
             <input type="submit" value="Enviar" />
