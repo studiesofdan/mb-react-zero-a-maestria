@@ -1,0 +1,10 @@
+form {
+    width: 15.25rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input, textarea, select {
+    display: block;
+    margin-top: 0.625rem;
+}
