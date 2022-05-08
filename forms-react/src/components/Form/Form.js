@@ -4,12 +4,14 @@ import './Form.css';
 
 const Form = () => {
   const [name, setName] = useState();
+  const [email, setEmail] = useState();
 
   const handleName = (e) => {
     setName(e.target.value);
   }
 
   console.log(name);
+  console.log(email);
 
   return (
     <div>
@@ -23,6 +25,13 @@ const Form = () => {
                 <label>
                   <span>Idade:</span>
                   <input type="text" name="idade" placeholder='Digite a sua idade' />
+                </label>
+
+                <br />
+
+                <label>
+                  <span>E-mail:</span>
+                  <input type="email" name="email" placeholder='Digite seu e-mail' onChange={(e) => setEmail(e.target.value)} />
                 </label>
             </section>
             <input type="submit" value="Enviar" />
