@@ -1,6 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 
+// 4 - custom hook
+import { useFetch } from './hooks/useFetch';
+
 const url = "http://localhost:3000/musicas";
 
 function App() {
@@ -9,7 +12,10 @@ function App() {
   const [artista, setArtista] = useState("");
   const [faixa, setFaixa] = useState("");
 
+  const { data: items } = useFetch(url);
+
   // 1 - resgatando dados
+  /*
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(url);
@@ -19,6 +25,7 @@ function App() {
     }
     fetchData();
   }, []);
+  */
 
   // 2 - add de musicas
   const handleSubmit = async (e) => {
@@ -50,7 +57,7 @@ function App() {
       <section>
         <h1>Lista de músicas</h1>
         <ul>
-          {musicas.map((musica) => (
+          {items && items.map((musica) => (
             <li key={musica.id}>
               {musica.artista} - {musica.faixa}
             </li>
