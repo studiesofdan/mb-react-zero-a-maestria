@@ -93,7 +93,9 @@ function App() {
               <input type="text" value={faixa} name="name" onChange={(e) => setFaixa(e.target.value)} />
             </label>
 
-            <input type='submit' value="Cadastrar" />
+            {/* 7 - state de loading no post */}
+            {loading && <input type="submit" disabled value="Aguarde" />}
+            {!loading && <input type='submit' value="Cadastrar" />}
           </fieldset>
         </form>
       </section>
