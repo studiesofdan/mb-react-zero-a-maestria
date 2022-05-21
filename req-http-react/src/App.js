@@ -12,7 +12,7 @@ function App() {
   const [artista, setArtista] = useState("");
   const [faixa, setFaixa] = useState("");
 
-  const { data: items, httpConfig } = useFetch(url);
+  const { data: items, httpConfig, loading } = useFetch(url);
 
   // 1 - resgatando dados
   /*
@@ -63,13 +63,17 @@ function App() {
     <div className="App">
       <section>
         <h1>Lista de músicas</h1>
-        <ul>
-          {items && items.map((musica) => (
-            <li key={musica.id}>
-              {musica.artista} - {musica.faixa}
-            </li>
-          ))}
-        </ul>
+        {/* 6 - loading */}
+        {loading && <p>Carregando dados...</p>}
+        {!loading && (
+            <ul>
+              {items && items.map((musica) => (
+                <li key={musica.id}>
+                  {musica.artista} - {musica.faixa}
+                </li>
+              ))}
+            </ul>
+        )}
       </section>
 
       <br/><br/>
