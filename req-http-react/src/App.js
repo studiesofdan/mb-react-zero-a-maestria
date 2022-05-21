@@ -12,7 +12,7 @@ function App() {
   const [artista, setArtista] = useState("");
   const [faixa, setFaixa] = useState("");
 
-  const { data: items } = useFetch(url);
+  const { data: items, httpConfig } = useFetch(url);
 
   // 1 - resgatando dados
   /*
@@ -36,6 +36,7 @@ function App() {
       faixa,
     };
 
+    /*
     const res = await fetch(url, {
       method: "POST",
       headers: {
@@ -43,10 +44,16 @@ function App() {
       },
       body: JSON.stringify(musica),
     })
+    */
 
     // 3 - carregamento dinâmico
+    /*
     const addedMusic = await res.json();
     setMusicas((prevProducts) => [...prevProducts, addedMusic]);
+    */
+
+    // 5 - Refatorando POST
+    httpConfig(musica, "POST");
 
     setArtista("");
     setFaixa("");
