@@ -1,0 +1,19 @@
+{
+    "musicas": [
+        {
+            "id": 1,
+            "faixa": "Gimme More",
+            "artista": "Britney Spears"
+        },
+        {
+            "id": 2,
+            "faixa": "That's More Like It",
+            "artista": "Selena Gomez"
+        },
+        {
+            "id": "3",
+            "faixa": "How You Get the Girl",
+            "artista": "Taylor Swift"
+        }
+    ]
+}
