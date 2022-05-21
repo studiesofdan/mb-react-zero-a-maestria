@@ -36,6 +36,13 @@ function App() {
       },
       body: JSON.stringify(musica),
     })
+
+    // 3 - carregamento dinâmico
+    const addedMusic = await res.json();
+    setMusicas((prevProducts) => [...prevProducts, addedMusic]);
+
+    setArtista("");
+    setFaixa("");
   };
 
   return (
