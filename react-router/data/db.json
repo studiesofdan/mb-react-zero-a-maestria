@@ -1,0 +1,19 @@
+{
+    "paises": [
+        {
+            "id": 1,
+            "pais": "China",
+            "sigla": "CN"
+        },
+        {
+            "id": 2,
+            "pais": "Coreia Popular",
+            "sigla": "KP"
+        },
+        {
+            "id": 3,
+            "pais": "Cuba",
+            "sigla": "CU"
+        }
+    ]
+}
