@@ -7,6 +7,7 @@ import About from "./pages/About/About"
 
 // 2 - navegação entre páginas
 import Navbar from './pages/Navbar/Navbar';
+import Paises from './pages/Paises/Paises';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/paises/:id" element={<Paises />} />
         </Routes>
       </BrowserRouter>
     </div>

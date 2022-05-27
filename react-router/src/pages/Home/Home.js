@@ -18,6 +18,8 @@ const Home = () => {
         <li key={country.id}>
           <h2>{country.pais}</h2>
           <p>{country.sigla}</p>
+          {/* 4 - rota dinâmica */}
+          <Link to={`/paises/${country.id}`}>Detalhes</Link>
         </li>
         ))}
       </ul>
