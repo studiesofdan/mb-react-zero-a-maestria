@@ -59,6 +59,11 @@ function App() {
     setFaixa("");
   };
 
+  // 8 - Delete
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE");
+  }
+
   return (
     <div className="App">
       <section>
@@ -71,6 +76,7 @@ function App() {
               {items && items.map((musica) => (
                 <li key={musica.id}>
                   {musica.artista} - {musica.faixa}
+                  <button onClick={() => handleRemove(musica.id)}>Excluir</button>
                 </li>
               ))}
             </ul>
