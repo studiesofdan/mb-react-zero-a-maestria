@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 
 const Paises = () => {
@@ -21,6 +21,8 @@ const Paises = () => {
             <div>
                 <h1>{paises.pais}</h1>
                 <p>{paises.sigla}</p>
+                {/* 6 - nested routes */}
+                <Link to={`/paises/${paises.id}/info`}>Mais informações</Link>
             </div>
         )}
     </>

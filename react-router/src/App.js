@@ -8,6 +8,7 @@ import About from "./pages/About/About"
 // 2 - navegação entre páginas
 import Navbar from './pages/Navbar/Navbar';
 import Paises from './pages/Paises/Paises';
+import Info from './pages/Info/Info';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/paises/:id" element={<Paises />} />
+          {/* 6 - nested routes */}
+          <Route path="/paises/:id/info" element={<Info />} />
         </Routes>
       </BrowserRouter>
     </div>
