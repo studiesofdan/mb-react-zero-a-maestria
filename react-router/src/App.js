@@ -9,6 +9,7 @@ import About from "./pages/About/About"
 import Navbar from './pages/Navbar/Navbar';
 import Paises from './pages/Paises/Paises';
 import Info from './pages/Info/Info';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/paises/:id" element={<Paises />} />
           {/* 6 - nested routes */}
           <Route path="/paises/:id/info" element={<Info />} />
+          {/* 7 - not found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
