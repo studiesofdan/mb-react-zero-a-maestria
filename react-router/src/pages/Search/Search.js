@@ -3,7 +3,7 @@ import { useFetch } from "../../hooks/useFetch"
 
 const Search = () => {
     const [searchParams] = useSearchParams()
-    const url = "http://locallhost:3000/paises?" + searchParams;
+    const url = "http://localhost:3000/paises?" + searchParams;
     const {data: paises, loading, error} = useFetch(url)
 
   return (
