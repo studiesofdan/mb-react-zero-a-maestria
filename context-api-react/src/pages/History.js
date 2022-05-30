@@ -1,8 +1,14 @@
-import React from 'react'
+import { useContext } from 'react'
+import { CounterContext } from '../context/CounterContext'
 
 const History = () => {
+  const { counter } = useContext(CounterContext);
+  
   return (
-    <div>History</div>
+    <div>
+      <p>History</p>
+      <p>Valor do contador: {counter}</p>
+    </div>
   )
 }
 
